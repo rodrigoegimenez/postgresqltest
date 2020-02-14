@@ -27,6 +27,7 @@ def importCSVFile(file):
     clienti = [map_rows_to_fields(row) for row in reader]
     Client.objects.bulk_create([
         Client(**client) for client in clienti
+        if not Client.objects.filter(id=client['id'])
     ])
     
 
