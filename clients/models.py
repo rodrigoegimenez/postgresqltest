@@ -13,7 +13,7 @@ from django.db import models
 
 class Client(models.Model):
     id = models.IntegerField(primary_key=True)
-    codice_fiscale = models.CharField(max_length=16)
+    codice_fiscale = models.CharField(max_length=20)
     ragione_cognome = models.CharField(max_length=128)
     nome = models.CharField(max_length=64)
     indirizzo = models.CharField(max_length=128)
