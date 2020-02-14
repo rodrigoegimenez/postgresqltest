@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from clients import views as client_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('upload/', client_views.uploadCSV)
 ]
